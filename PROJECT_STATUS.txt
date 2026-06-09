@@ -1,0 +1,21 @@
+Dataset: BraTS 2021
+
+Patients: 1251
+Average tumor slices: 65.1
+Total tumor-containing slices: 81437
+
+Input shape:
+(240, 240, 4)
+
+Mask shape:
+(240, 240)
+
+Classes:
+0 = Background
+1 = NCR/NET
+2 = Edema
+4 = Enhancing Tumor
+
+Dataset builder tested on first 5 patients:
+X shape = (326, 240, 240, 4)
+Y shape = (326, 240, 240)let
