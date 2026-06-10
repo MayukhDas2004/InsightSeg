@@ -52,3 +52,13 @@ logs/
 
 .DS_Store
 Thumbs.db
+
+# InsightSeg generated files
+X.npy
+Y.npy
+*.keras
+training_history.csv
+backup/
+
+# Local BraTS dataset
+BraTS2021_Training_Data/

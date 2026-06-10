@@ -2,7 +2,7 @@ from pathlib import Path
 import nibabel as nib
 import numpy as np
 
-dataset_path = Path(r"C:\Users\megha\Downloads\BraTS\BraTS2021_Training_Data")
+dataset_path = Path(r"C:\InsightSeg\data\BraTS2021_Training_Data")
 
 def normalize(img):
     return (img - np.mean(img)) / np.std(img)
