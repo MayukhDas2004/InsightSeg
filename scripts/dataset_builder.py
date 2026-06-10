@@ -9,10 +9,13 @@ def normalize(img):
 
 patients = [p for p in dataset_path.iterdir() if p.is_dir()]
 
+print("Total patients found:", len(patients))
+print("Processing patients:", len(patients[:250]))
+
 X = []
 Y = []
 
-for patient in patients[:100]:   # first 5 patients only
+for patient in patients[:250]:   
 
     flair = nib.load(list(patient.glob("*_flair.nii.gz"))[0]).get_fdata()
     t1 = nib.load(list(patient.glob("*_t1.nii.gz"))[0]).get_fdata()
@@ -40,6 +43,8 @@ for patient in patients[:100]:   # first 5 patients only
 
             X.append(image_slice)
             Y.append(mask_slice)
+
+print("Total slices collected:", len(X))
 
 X = np.array(X)
 Y = np.array(Y)
