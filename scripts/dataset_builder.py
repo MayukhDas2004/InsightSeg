@@ -12,7 +12,7 @@ patients = [p for p in dataset_path.iterdir() if p.is_dir()]
 X = []
 Y = []
 
-for patient in patients[:20]:   # first 5 patients only
+for patient in patients[:100]:   # first 5 patients only
 
     flair = nib.load(list(patient.glob("*_flair.nii.gz"))[0]).get_fdata()
     t1 = nib.load(list(patient.glob("*_t1.nii.gz"))[0]).get_fdata()
